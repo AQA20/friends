@@ -13,3 +13,7 @@ git clone
 cd the folder where you cloned the repo
 bundle install
 rails s
+
+then login with this test user which has a list of friends so you can test the app
+email: 'william@test.com'
+password: '2qaGq5EM56nY'
