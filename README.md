@@ -3,7 +3,7 @@
 This is a simple app called **"Friends"** where you can sign up to the app and CURD a friend to/from your
 friend list, each friend has a first name, last name, email, phone, photo & twitter(optional).
 
-The app include CURD, Authentication(devise), Concerns(used for pagination), 
+The app includes CURD, Authentication(devise), Concerns(used for pagination), 
 Active record association (one to many), partials, basic validations, search, css and bootstrap for designing.
 
 
