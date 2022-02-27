@@ -9,11 +9,22 @@ Active record association (one to many), partials, basic validations, css and bo
 
 Follow the following steps to start the app locally (The app is not configured for production):
 
-git clone
-cd the folder where you cloned the repo
-bundle install
-rails s
 
-then login with this test user which has a list of friends so you can test the app
-email: 'william@test.com'
-password: '2qaGq5EM56nY'
+
+Install sqlLite3 If you don't already have it
+
+`apt-get install libsqlite3-dev
+
+git clone https://github.com/AQA20/friends.git
+
+cd friends
+
+bundle install
+
+rails s`
+
+Then login with this test user which has a list of friends so you can test the app
+
+`email: 'william@test.com'
+password: '2qaGq5EM56nY'`
+
