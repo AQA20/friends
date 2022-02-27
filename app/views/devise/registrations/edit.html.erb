@@ -1,0 +1,36 @@
+<div class="container">
+  <%= render "page_header", title: 'Edit account', button: 'no' %>
+  <%= render "devise_form", 
+    model: @user, 
+    url: registration_path(@user),
+    action: 'Update',
+    fields: [
+      {
+        name: :first_name,
+        type: :text_field,
+      },
+      {
+        name: :last_name,
+        type: :text_field,
+      },
+      {
+        name: :email,
+        type: :email_field,
+      },
+      {
+        name: :current_password,
+        type: :password_field,
+        label: "#{:current_password} (we need your current password to confirm your changes)"
+      },
+      {
+        name: :password,
+        type: :password_field,
+        label: "#{:password} (leave blank if you don't want to change it)"
+      },
+      {
+        name: :password_confirmation,
+        type: :password_field,
+      },
+    ]
+     %>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <%= render "page_header", title: 'Sign up', button: 'no' %>
+  <%= render "devise_form", 
+    model: @user, 
+    url: registration_path(@user),
+    action: 'Sign up',
+    fields: [
+      {
+        name: :first_name,
+        type: :text_field,
+      },
+      {
+        name: :last_name,
+        type: :text_field,
+      },
+      {
+        name: :email,
+        type: :email_field,
+      },
+      {
+        name: :password,
+        type: :password_field,
+      },
+      {
+        name: :password_confirmation,
+        type: :password_field,
+      }
+    ]
+     %>
+</div>

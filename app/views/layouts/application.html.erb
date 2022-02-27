@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Friends</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag asset_path('robot.png') %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body data-turbolinks="false">
+    <%= render 'navbar' %>
+    <div class="container" style="margin-bottom: 80px;">
+      <%= render 'alert' %>
+      <%= yield %>
+    </div>
+    <%= render 'footer' %>
+  </body>
+</html>

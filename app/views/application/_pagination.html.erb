@@ -1,0 +1,15 @@
+<nav  aria-label="..." style="margin: 40px 0;">
+  <ul class="pagination">
+    <li class="page-item <%= 'disabled' if !pagination.previous_page? %>">
+      <%= link_to 'Previous', root_path(page: pagination.previous_page), class: "page-link" %>
+    </li>
+    <% for page in 1..pagination.total_pages  do %>
+    <li class="page-item <%= 'active' if pagination.page == page %>">
+      <%= link_to page, root_path(page: page), class: "page-link active" %>
+    </li>
+    <% end %>
+    <li class="page-item <%= 'disabled' if !pagination.next_page? %> ">
+      <%= link_to 'Next', root_path(page: pagination.next_page), class: "page-link" %>
+    </li>
+  </ul>
+</nav>

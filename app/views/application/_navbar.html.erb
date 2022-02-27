@@ -1,0 +1,18 @@
+<nav class="navbar-dark bg-dark">
+  <div class="container">
+    <div class="friends-navbar">
+      <div>
+        <%= link_to root_path do %>
+          <%= image_tag asset_path('robot.png'), height: "60px"  %>
+        <% end %>
+      </div>
+      <div class="search-form-desktop"><%= render 'search_form' if user_signed_in? %></div>
+
+      <div><%= render 'user_menu' %></div>
+      
+    </div>
+
+    <div class="search-form-mobile"><%= render 'search_form' if user_signed_in? %></div>
+  </div>
+</nav>
+<br>

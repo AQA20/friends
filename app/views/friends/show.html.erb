@@ -1,0 +1,32 @@
+<div class="container">
+  <%= render "page_header", title: "#{@friend.first_name} #{@friend.last_name}" %>
+  <div class="card">
+    <div class="card-body row">
+      <div class="col-12 col-sm-7 col-md-8" >
+        <div class="m-auto" style="max-width: 300px">
+          <%= image_tag @friend.photo,  class: "img-fluid max-width" %>
+        </div>
+      </div>
+      <div class="col-12 col-sm-5 col-md-4  mt-auto">
+        <h5 class="card-title mt-3"><%="#{@friend.first_name} #{@friend.last_name}"%></h5>
+        <strong class="strong">Phone:</strong>
+        <p class="card-text"><%= @friend.phone%></p>
+        <strong class="strong">Email:</strong>
+        <p class="card-text"><%= @friend.email%></p>
+        <strong class="strong">Twitter:</strong>
+        <% if @friend.twitter.empty?
+            twitter = 'N/A'
+           else 
+            twitter = @friend.twitter %>
+        <%end%>
+        <p class="card-text"><%= twitter %></p>
+        <div>
+                <%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-primary" %>
+        <%= render 'delete_friend_button', friend: @friend %>
+        </div>
+
+      </div>
+  </div>
+</div>
+</div>
+</div>

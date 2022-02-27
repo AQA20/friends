@@ -1,0 +1,5 @@
+class ChangeEmailOnFriends < ActiveRecord::Migration[7.0]
+  def change
+    change_column_null :friends, :email, false
+  end
+end

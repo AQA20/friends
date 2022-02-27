@@ -1,0 +1,5 @@
+<div class="container">
+  <%= render "page_header", title: 'New Friend' %>
+  <%= render "form", model: @friend, exceptions: ['id', 'created_at', 'updated_at', 'user_id'] %>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="col">
+  <div class="card" style="border-radius: 30px">
+    <%= link_to friend do %>
+      <%= image_tag friend.photo, class: "card-img-top" %>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"><%= "#{friend.first_name} #{friend.last_name}" %></h5>
+      <%= link_to 'View', friend, class: 'card-link btn btn-sm  btn-outline-primary' %>
+      <%= link_to 'Edit', edit_friend_path(friend), class: 'card-link btn btn-sm btn-outline-primary' %>
+      <span class="card-link">
+        <%= render 'delete_friend_button', friend: friend, class_name: 'btn btn-sm  btn-outline-primary' %>
+      </span>
+    </div>
+  </div>
+</div>

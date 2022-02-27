@@ -1,0 +1,77 @@
+@import "bootstrap";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Override bootstrap style for h1 & h2
+h1,h2 {
+  margin-top:  0;
+  margin-bottom: 0;
+}
+
+
+.friends-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-form-desktop {
+  display: block;
+}
+.search-form-mobile {
+  display: none;
+  margin: 10px 0 20px 0;
+}
+
+.profile-dropdown-menu {
+  cursor: pointer;
+  color: grey;
+}
+
+.profile-dropdown-menu:hover {
+  color: rgb(170, 167, 167);
+}
+
+.dropdown-toggle::after {
+  display: unset;
+  vertical-align: -0.745em;
+}
+
+.form-error-message {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.form  br {
+  display: none;
+}
+
+
+footer{
+  margin-top: auto;
+}
+
+
+@media (max-width: 1000px) {
+  .search-form-desktop {
+    display: none;
+  }
+
+  .search-form-mobile {
+    display: block;
+  }
+
+}
