@@ -1,7 +1,7 @@
 # README
 
-This is a simple app called **"Friends"** where you can sign up to the app and CURD a fried to/from your
-friends list, each friend has a first name, last name, email, phone, photo & twitter(optional).
+This is a simple app called **"Friends"** where you can sign up to the app and CURD a friend to/from your
+friend list, each friend has a first name, last name, email, phone, photo & twitter(optional).
 
 The app include CURD, Authentication(devise), Concerns(used for pagination), 
 Active record association (one to many), partials, basic validations, css and bootstrap for designing.
