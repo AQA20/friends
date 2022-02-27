@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple app called "Friends" where you can sign up to the app and CURD a fried to/from your
+friends list, each friend has a first name, last name, email, phone, photo & twitter(optional).
 
-Things you may want to cover:
+The app include CURD, Authentication(devise), Concerns(used for pagination), 
+Active record association (one to many), partials, basic validations, css and bootstrap for designing.
 
-* Ruby version
 
-* System dependencies
+Follow the following steps to start the app locally (The app is not configured for production):
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+git clone
+cd the folder where you cloned the repo
+bundle install
+rails s
