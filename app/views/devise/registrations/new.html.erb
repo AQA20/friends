@@ -1,9 +1,11 @@
 <div class="container">
   <%= render "page_header", title: 'Sign up', button: 'no' %>
+  
   <%= render "devise_form", 
     model: @user, 
     url: registration_path(@user),
     action: 'Sign up',
+    image_uploader: true,
     fields: [
       {
         name: :first_name,
@@ -12,6 +14,11 @@
       {
         name: :last_name,
         type: :text_field,
+      },
+      {
+        name: :avatar,
+        type: :file_field,
+        accept: "image/png, image/jpg, image/jpeg" 
       },
       {
         name: :email,

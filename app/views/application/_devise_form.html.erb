@@ -4,18 +4,19 @@
                class: "form #{fields_display} mb-3", 
                novalidate: 'novalidate'
              } do |form| %>
+
   <% fields.each do |field| %>
     <% field_name = field[:name] %>
     <div class="mb-3 <%= field[:class_name] || 'col-12 col-sm-6' %>">
       <%= form.label field[:label] || field_name, class: 'form-label' %><br />
-      <%= form.method(field[:type]).call field_name, autocomplete: field_name, class: 'form-control' %>
+      <%= form.method(field[:type]).call field_name, 
+      autocomplete: field_name, class: 'form-control', id: field[:id], accept: field[:accept] %>
       <% @user.errors.full_messages_for(field_name).each do |message| %>
         <div class="form-error-message"><%= message %></div>
       <% end %>
     </div>
   <% end %>
-  <div>
-    <%= form.submit action, class: 'mt-3 btn btn-primary' %>
+  <div> <%= form.submit action, class: 'mt-3 btn btn-primary' %>
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
